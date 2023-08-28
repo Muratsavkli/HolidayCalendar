@@ -56,7 +56,7 @@ namespace HolidayCalendar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PublicHolidays");
+                    b.ToTable("PublicHolidays", (string)null);
                 });
 #pragma warning restore 612, 618
         }

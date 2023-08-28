@@ -14,7 +14,14 @@ namespace HolidayCalendar
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder
-			.UseSqlServer(@"server=(localdb)\mssqllocaldb; Database=PublicHolidays;Trusted_Connection=True");
+			.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;
+							Initial Catalog=PublicHolidays;
+							Integrated Security=True;
+							Connect Timeout=30;
+							Encrypt=False;
+							Trust Server Certificate=False;
+							Application Intent=ReadWrite;
+							Multi Subnet Failover=False");
 		}
 	}
 }
